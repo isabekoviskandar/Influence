@@ -41,15 +41,16 @@ export default function TimelinePage() {
         <div className="absolute top-1/4 right-1/4 w-64 h-64 bg-[#7B61FF]/10 blur-[80px] rounded-full"></div>
       </div>
 
-      {/* Top Nav */}
+      {/* Nav Link back to Home */}
       <div className="absolute top-0 left-0 w-full p-6 z-50 flex justify-between items-center max-w-7xl mx-auto">
+        <Link href="/" className="flex items-center gap-2 group text-[#c9c4d7] hover:text-[#e1e1f2] transition-colors">
+          <ArrowLeft className="w-5 h-5 group-hover:-translate-x-1 transition-transform" />
+          <span className="font-semibold text-sm tracking-tight">Back to Home</span>
+        </Link>
         <div className="flex items-center gap-2">
           <span className="text-xl font-bold tracking-tighter text-[#e1e1f2]">influence.uz</span>
           <div className="w-1.5 h-1.5 rounded-full bg-[#5b3fd4]"></div>
         </div>
-        {/* <Link href="/preview" className="flex items-center gap-2 group text-[#c9c4d7] hover:text-[#e1e1f2] transition-colors px-4 py-2 border border-[#484554]/30 rounded-full hover:bg-[#1d1f2b] active:scale-95">
-          <span className="font-semibold text-sm tracking-tight">Platform Preview &rarr;</span>
-        </Link> */}
       </div>
 
       <div className="relative z-10 flex flex-col items-center text-center px-6 w-full max-w-4xl mx-auto">
