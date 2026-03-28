@@ -20,7 +20,7 @@ export default function AdminSidebar() {
 
   return (
     <aside className="w-64 h-screen fixed left-0 top-0 bg-[#0A0C14] border-r border-[#1E2035] flex flex-col py-6 px-4 z-50">
-      
+
       {/* Brand Header */}
       <div className="mb-8 px-2">
         <div className="flex items-center gap-2 text-[#E24B4A] font-bold tracking-widest uppercase text-[10px] bg-[#E24B4A]/10 px-2 py-0.5 rounded w-fit mb-1 border border-[#E24B4A]/20">
@@ -35,19 +35,18 @@ export default function AdminSidebar() {
       {/* Navigation mapping */}
       <nav className="flex-1 space-y-1 overflow-y-auto custom-scrollbar">
         {navItems.map((item) => {
-          const isActive = item.matchExact 
-            ? pathname === item.href 
+          const isActive = item.matchExact
+            ? pathname === item.href
             : pathname.startsWith(item.href);
 
           return (
-            <Link 
-              key={item.name} 
+            <Link
+              key={item.name}
               href={item.href}
-              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 group ${
-                isActive 
-                  ? "text-[#e1e1f2] bg-[#5B3FD4]/20 font-semibold border-l-2 border-[#5B3FD4]" 
-                  : "text-[#c9c4d7] hover:text-[#e1e1f2] hover:bg-[#1d1f2b] border-l-2 border-transparent active:scale-[0.98]"
-              }`}
+              className={`flex items-center gap-3 px-3 py-2.5 rounded-lg transition-all duration-200 group ${isActive
+                ? "text-[#e1e1f2] bg-[#5B3FD4]/20 font-semibold border-l-2 border-[#5B3FD4]"
+                : "text-[#c9c4d7] hover:text-[#e1e1f2] hover:bg-[#1d1f2b] border-l-2 border-transparent active:scale-[0.98]"
+                }`}
             >
               <item.icon className="w-5 h-5" />
               <span className="text-sm">{item.name}</span>
